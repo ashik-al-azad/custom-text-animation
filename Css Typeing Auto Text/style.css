@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+h1 {
+    position: relative;
+    font-size: 50px;
+    color: #fff;
+    overflow: hidden;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    left: 0%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, #000 5%, #000 100%);
+    /* animation: animate 10s linear forwards; */
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        left: -20%;
+    }
+
+    50% {
+        left: 120%;
+    }
+
+    100% {
+        left: -20%;
+    }
+}
